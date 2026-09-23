@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+    --color-brand-red: #ea2e0e;
+}
+
+.container {
+    @apply container mx-auto px-2;
+}
+
+.item-center {
+    @apply flex items-center justify-center;
+}
+
+.item-h-center {
+    @apply flex justify-center;
+}
+
+.item-v-center {
+    @apply flex items-center;
+}
+
+.item-between {
+    @apply flex items-center justify-between;
+}
+
 #root {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
