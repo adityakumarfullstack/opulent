@@ -8,19 +8,19 @@
     @apply container mx-auto px-2;
 }
 
-.item-center {
+.flex-center {
     @apply flex items-center justify-center;
 }
 
-.item-h-center {
+.flex-h-center {
     @apply flex justify-center;
 }
 
-.item-v-center {
+.flex-v-center {
     @apply flex items-center;
 }
 
-.item-between {
+.flex-between {
     @apply flex items-center justify-between;
 }
 

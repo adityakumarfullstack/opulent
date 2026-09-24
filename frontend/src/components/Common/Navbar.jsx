@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar">
-                <div className="container item-between py-4">
+                <div className="container flex-between py-4">
                     {/* Nav Logo */}
                     <div className="logo">
                         <Link to="/" className="text-2xl font-medium">
