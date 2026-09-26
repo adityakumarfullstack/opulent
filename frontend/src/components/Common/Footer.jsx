@@ -7,7 +7,7 @@ import { FiMail, FiPhoneCall } from "react-icons/fi"
 
 const Footer = () => {
     return (
-        <footer className="footer pt-12 border-t border-gray-400">
+        <footer className="footer pt-12 border-t border-gray-300">
             <div className="container">
                 <div className="footer-top grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     <div className="footer-widget newsletter">
@@ -84,7 +84,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="footer-bottom border-t border-gray-400 py-5 mt-10">
+                <div className="footer-bottom border-t border-gray-200 py-5 mt-10">
                     <p className="text-center text-gray-600 text-sm">{new Date().getFullYear()} © Opulent. All rights reserved.</p>
                 </div>
             </div>

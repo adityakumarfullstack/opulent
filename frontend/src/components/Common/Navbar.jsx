@@ -4,7 +4,7 @@ import { FiUser } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import NavSearch from "./NavSearch";
-import CartDrawer from "../Layout/CartDrawer";
+import CartDrawer from "../UiLayout/CartDrawer";
 import { IoMdClose } from "react-icons/io";
 
 

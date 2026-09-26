@@ -4,8 +4,12 @@
     --color-brand-red: #ea2e0e;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 .container {
-    @apply container mx-auto px-2;
+    @apply container mx-auto px-3 md:px-2 lg:px-0;
 }
 
 .flex-center {
@@ -38,4 +42,5 @@ h5,
 h6 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
+    line-height: 1.3;
 }
