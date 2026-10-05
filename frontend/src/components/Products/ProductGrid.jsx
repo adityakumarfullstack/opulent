@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
-const ProductGrid = ({ products, sectionTitle, hPadding }) => {
+const ProductGrid = ({ products, sectionTitle, width }) => {
     return (
         <section className="product-grid-section py-10">
-            <div className={`container md:${hPadding ? 'px-4' : ''}`}>
+            <div className={`${width ? `px-3 ${width} mx-auto` : 'container'}`}>
                 {
                     sectionTitle &&
                     <div className="section-header">
@@ -14,7 +14,7 @@ const ProductGrid = ({ products, sectionTitle, hPadding }) => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         {products.map((product) => (
                             <div key={product._id} className="product-card relative p-2">
-                                <div className="product-item-image mb-3">
+                                <div className="product-item-image mb-3 h-96 w-full">
                                     <img src={product.images[0].url} alt={product.images[0].alt || product.name} className="w-full h-full object-cover object-center rounded-lg" />
                                 </div>
                                 <div className="product-item-info">

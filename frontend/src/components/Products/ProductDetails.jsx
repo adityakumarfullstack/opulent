@@ -117,6 +117,7 @@ const ProductDetails = ({ sectionTitle }) => {
 
     useEffect(() => {
         if (selectedProduct?.images?.length > 0) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setMainImage(selectedProduct.images[0].url)
         }
     }, [selectedProduct])
@@ -124,7 +125,7 @@ const ProductDetails = ({ sectionTitle }) => {
     return (
         <>
             <section className="product-details py-4 py-lg-6">
-                <div className="container">
+                <div className="max-w-6xl mx-auto px-3">
                     {
                         sectionTitle &&
                         <div className="section-header">
@@ -197,7 +198,7 @@ const ProductDetails = ({ sectionTitle }) => {
                     </div>
                 </div>
             </section>
-            <ProductGrid products={similarProducts} sectionTitle="You May Also Like" hPadding="px-6" />
+            <ProductGrid products={similarProducts} sectionTitle="You May Also Like" width="max-w-6xl" />
         </>
     )
 }
