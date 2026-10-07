@@ -4,6 +4,14 @@
     --color-brand-red: #ea2e0e;
 }
 
+::-webkit-scrollbar {
+    @apply w-1.5 bg-gray-300;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-600;
+}
+
 html {
     scroll-behavior: smooth
 }
@@ -69,4 +77,25 @@ h6 {
 .order-list::-webkit-scrollbar-thumb {
     background-color: #ea2e0e;
     border-radius: 10px;
+}
+
+.filter-heading {
+    @apply text-lg font-semibold mb-1;
+}
+
+.filter-section {
+    @apply mb-3;
+}
+
+.filter-item {
+    @apply flex items-center gap-2 mb-1;
+}
+
+.filter-item input[type="checkbox"],
+.filter-item input[type="radio"] {
+    @apply w-4 h-4 accent-brand-red;
+}
+
+.price-range input[type="range"] {
+    @apply w-full appearance-none bg-gray-200 h-2 rounded-full outline-none cursor-pointer;
 }

@@ -51,7 +51,7 @@ const MyOrders = () => {
     return (
         <div className="my-orders max-w-7xl mx-auto p-4 sm:p-6">
             <h2 className="text-xl md:text-2xl font-semibold mb-4">My Orders</h2>
-            <div className="order-list relative overflow-x-auto sm:rounded-lg border border-gray-200">
+            <div className="order-list relative overflow-x-auto rounded border border-gray-200">
                 <table className="w-full text-center text-gray-900">
                     <thead className="text-sm text-gray-700 uppercase bg-gray-100">
                         <tr>

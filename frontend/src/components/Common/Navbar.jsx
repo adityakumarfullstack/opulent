@@ -33,7 +33,7 @@ const Navbar = () => {
 
                     {/* Navigation Menu */}
                     <div className="nav-menu hidden md:flex gap-4">
-                        <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">Men</Link>
+                        <Link to="/collections/all" className="text-gray-700 hover:text-black text-sm font-medium uppercase">Men</Link>
                         <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">Women</Link>
                         <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">Top Wear</Link>
                         <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">Bottom Wear</Link>
