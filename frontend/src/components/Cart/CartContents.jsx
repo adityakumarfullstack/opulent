@@ -51,7 +51,7 @@ const CartContents = () => {
                             </div>
                         </div>
                         <div className="product-price text-right">
-                            <p className="text-lg font-semibold">${product.price}</p>
+                            <p className=" font-medium">${product.price}</p>
                             <button type="button">
                                 <RiDeleteBin3Line className="inline-block h-6 w-6 text-red-600" />
                             </button>

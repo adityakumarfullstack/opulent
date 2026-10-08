@@ -26,6 +26,7 @@ const FilterSidebar = () => {
 
     useEffect(() => {
         const params = Object.fromEntries([...searchParams]) // Convert searchParams to an object { key: value, ... }
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setFilters({
             category: params.category || '',
             gender: params.gender || '',
