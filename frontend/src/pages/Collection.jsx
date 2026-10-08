@@ -86,25 +86,26 @@ const Collection = () => {
     }, [])
 
     return (
-        <section className="collection-page py-16">
+        <section className="collection-page py-10 lg:py-16">
             <div className="container">
                 <div className="flex flex-col lg:flex-row gap-3">
-                    {/* Mobile Filter Button */}
-                    <div className="lg:hidden btn-parent flex-between">
-                        <button type="button" onClick={(event) => { event.stopPropagation(); toggleSidebar(); }} className="flex-center gap-2 border border-gray-300 px-4 py-2 text-sm"><FaFilter /> Filter</button>
-                        <div className="sort-options-parent">
-                            <SortOptions />
-                        </div>
-                    </div>
+
                     {/* Filter Sidebar */}
-                    <div className={`filter-sidebar-parent ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} fixed top-0 left-0 bottom-0 w-2/3 md:w-2/5 h-full overflow-y-auto bg-white z-50 transition-transform ease-in-out duration-300 lg:translate-x-0 lg:static shadow-lg lg:shadow-none`} ref={sidebarRef}>
+                    <div className={`filter-sidebar-parent ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} fixed top-0 left-0 bottom-0 w-2/3 md:w-2/5 lg:w-1/4 lg:max-w-[300px] h-full overflow-y-auto bg-white z-50 transition-transform ease-in-out duration-300 lg:translate-x-0 lg:static shadow-lg lg:shadow-none`} ref={sidebarRef}>
                         <FilterSidebar />
                     </div>
 
                     {/* Product List */}
                     <div className="product-list flex-1 p-4">
-                        <h2 className="text-2xl font-bold mb-4">All Collection</h2>
-                        <SortOptions />
+                        <h2 className="text-2xl font-bold mb-4 text-center lg:text-left">All Collection</h2>
+                        <div className="collection-actions flex items-center justify-between lg:justify-end">
+                            <div className="btn-parent lg:hidden">
+                                <button type="button" onClick={(event) => { event.stopPropagation(); toggleSidebar(); }} className="flex-center gap-2 border border-gray-300 px-4 py-2 text-sm"><FaFilter /> Filter</button>
+                            </div>
+                            <div className="sort-options-parent">
+                                <SortOptions />
+                            </div>
+                        </div>
                         <ProductGrid products={products} />
                     </div>
                 </div>

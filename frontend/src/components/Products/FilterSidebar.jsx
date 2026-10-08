@@ -53,6 +53,7 @@ const FilterSidebar = () => {
             newFilters[name] = value
         }
         setFilters(newFilters)
+        updateUrlParams(newFilters)
     }
 
     const updateUrlParams = (newFilters) => {
@@ -68,6 +69,15 @@ const FilterSidebar = () => {
         setSearchParams(params)
         navigate(`?${params.toString()}`)
     }
+
+    const handlePriceChange = (e) => {
+        const newPrice = e.target.value;
+        setPriceRange([0, newPrice]);
+        const newFilters = { ...filters, maxPrice: newPrice };
+        setFilters(newFilters);
+        updateUrlParams(newFilters);
+    }
+
     return (
         <div className="filter-sidebar p-4">
             <div className="filter-section">
@@ -110,7 +120,7 @@ const FilterSidebar = () => {
                 <div className="filter-list flex flex-wrap gap-2">
                     {colors.map((color) => (
                         <div key={color} className="filter-item">
-                            <button type="button" style={{ backgroundColor: color }} name="color" onClick={handleFilterChange} className={`${filters.color === color ? 'active ring ring-1 ring-offset-2 ring-brand-red' : ''} h-6 w-6 rounded-full border border-gray-300`}></button>
+                            <button type="button" style={{ backgroundColor: color }} name="color" value={color} onClick={handleFilterChange} className={`${filters.color === color ? 'active ring ring-1 ring-offset-2 ring-brand-red' : ''} h-6 w-6 rounded-full border border-gray-300`}></button>
                         </div>
                     ))}
                 </div>
@@ -122,7 +132,8 @@ const FilterSidebar = () => {
                         type="range"
                         min={0}
                         max={100}
-                        value={priceRange}
+                        value={priceRange[1]}
+                        onChange={handlePriceChange}
                     />
                     <div className="price-labels flex-between">
                         <span>${priceRange[0]}</span>
