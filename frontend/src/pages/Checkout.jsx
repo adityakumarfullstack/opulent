@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
-const Checkout = () => {
-    const products = [
+const cart = {
+    products: [
         {
             productId: 1,
             name: "Product 1",
@@ -30,8 +30,11 @@ const Checkout = () => {
             price: 300,
             image: "https://picsum.photos/200?random=3",
         },
-    ]
+    ],
+    totalPrice: 600
+}
 
+const Checkout = () => {
     const navigate = useNavigate();
     const [shippingAddress, setShippingAddress] = useState({
         firstName: "",
@@ -105,6 +108,44 @@ const Checkout = () => {
                                 )}
                             </div>
                         </form>
+                    </div>
+
+                    {/* Right Section */}
+                    <div className="right-section bg-gray-50 rounded-lg p-4 md:p-5 border border-gray-100">
+                        <h3 className="text-lg font-semibold mb-4 text-center lg:text-left">Order Summary</h3>
+                        <div className="border-t border-gray-300 py-4 mb-4">
+                            {
+                                cart.products.map((product, index) => (
+                                    <div key={index} className="flex justify-between py-2 border-b border-gray-300">
+                                        <div className="flex items-start">
+                                            <div className="product-image">
+                                                <img src={product.image} className="w-full h-24 object-cover" alt={product.name} />
+                                            </div>
+                                            <div className="ml-3">
+                                                <h3 className="text-md font-medium">{product.name}</h3>
+                                                <p className="text-sm text-gray-600">Size: {product.size}</p>
+                                                <p className="text-sm text-gray-600">Color: {product.color}</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p className="text-md font-medium">${product.price}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <div className="cart-total flex justify-between">
+                            <p>Subtotal</p>
+                            <p>${cart.totalPrice}</p>
+                        </div>
+                        <div className="cart-shipping flex justify-between mt-2">
+                            <p>Shipping</p>
+                            <p>Free</p>
+                        </div>
+                        <div className="cart-total flex justify-between border-t border-gray-300 pt-3 mt-3">
+                            <p className="font-medium">Total</p>
+                            <p className="font-medium">${cart.totalPrice}</p>
+                        </div>
                     </div>
                 </div>
             </div>
