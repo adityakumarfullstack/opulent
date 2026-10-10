@@ -23,7 +23,7 @@ const CartDrawer = ({ drawerOpen, handleDrawerToggle }) => {
                 <CartContents />
             </div>
 
-            <div className="cart-footer fixed bottom-0 p-4 bg-white">
+            <div className="cart-footer fixed bottom-0 p-4 bg-white w-full">
                 <button type="button" className="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold transition duration-200 hover:bg-black/90" onClick={handleCheckout}>Checkout</button>
                 <p className="text-sm text-center text-gray-600 mt-2">Shipping,taxes and discount codes calculated at checkout</p>
             </div>

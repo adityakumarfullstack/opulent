@@ -44,9 +44,9 @@ const CartContents = () => {
                                 <h3 className="text-lg font-semibold">{product.name}</h3>
                                 <p className="text-sm text-gray-600">Size: {product.size} | Color: {product.color}</p>
                                 <div className="quantity flex items-center mt-2">
-                                    <button type="button" className="border border-gray-300 rounded px-2 py-1 text-lg font-medium">-</button>
-                                    <span className="mx-2">{product.quantity}</span>
-                                    <button type="button" className="border border-gray-300 rounded px-2 py-1 text-lg font-medium">+</button>
+                                    <button type="button" className="border border-gray-300 rounded px-3 py-1 text-lg font-medium">-</button>
+                                    <span className="mx-3">{product.quantity}</span>
+                                    <button type="button" className="border border-gray-300 rounded px-3 py-1 text-lg font-medium">+</button>
                                 </div>
                             </div>
                         </div>

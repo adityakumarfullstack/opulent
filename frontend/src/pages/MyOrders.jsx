@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
-const MyOrders = () => {
+const MyOrders = ({ section }) => {
     const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
+
+    const handleRowClick = (orderId) => {
+        navigate(`/order/${orderId}`);
+    }
 
     useEffect(() => {
         //Simulate Orders
@@ -49,8 +55,8 @@ const MyOrders = () => {
     }, [])
 
     return (
-        <div className="my-orders max-w-7xl mx-auto p-4 sm:p-6">
-            <h2 className="text-xl md:text-2xl font-semibold mb-4">My Orders</h2>
+        <div className={`my-orders max-w-7xl mx-auto  ${section ? "py-10 lg:py-16" : "p-4 sm:p-6"}`}>
+            <h2 className={`text-xl md:text-2xl font-semibold mb-4 ${section ? "text-center" : ""}`}>My Orders</h2>
             <div className="order-list relative overflow-x-auto rounded border border-gray-200">
                 <table className="w-full text-center text-gray-900">
                     <thead className="text-sm text-gray-700 uppercase bg-gray-100">
@@ -80,7 +86,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {orders.length > 0 ? orders.map((order) => (
-                            <tr key={order._id} className="border-b border-gray-200 hover:bg-gray-50">
+                            <tr key={order._id} onClick={() => handleRowClick(order._id)} className="border-b border-gray-200 hover:bg-gray-50">
                                 <td className="px-2 py-2 sm:py-3 whitespace-nowrap">
                                     <img src={order.orderItems[0].image} alt={order.orderItems[0].name} className="w-10 h-10 md:w-16 md:h-16 object-cover rounded-md" />
                                 </td>
