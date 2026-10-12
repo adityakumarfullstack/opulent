@@ -41,6 +41,7 @@ const Navbar = () => {
 
                     {/* Nav Actions */}
                     <div className="nav-actions flex gap-4">
+                        <Link to="/admin" className="bg-black px-3 py-1 rounded-sm text-white text-sm font-medium uppercase">Admin</Link>
                         <Link to="/profile" className="text-gray-700 hover:text-black text-sm font-medium uppercase">
                             <FiUser className="inline-block h-6 w-6" />
                         </Link>
