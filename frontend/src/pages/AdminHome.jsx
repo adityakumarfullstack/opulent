@@ -33,7 +33,7 @@ const AdminHome = () => {
 
     return (
         <div className="container">
-            <h2 className="text-3xl font-bold mb-6">Admin Dashboard</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center md:text-left">Admin Dashboard</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="card p-4 shadow-sm rounded-lg border border-gray-200">
                     <h3 className="text-lg font-semibold mb-2">Revenue</h3>
@@ -51,7 +51,7 @@ const AdminHome = () => {
                 </div>
             </div>
             <div className="mt-6">
-                <h2 className="text-2xl font-bold mb-4">Recent Orders</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center md:text-left">Recent Orders</h2>
                 <div className="recent-orders overflow-x-auto">
                     <table className="table-auto w-full border-collapse text-center">
                         <thead className="bg-gray-100 uppercase text-gray-700">

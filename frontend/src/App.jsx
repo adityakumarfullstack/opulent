@@ -13,6 +13,7 @@ import OrderDetails from './pages/OrderDetails'
 import MyOrders from './pages/MyOrders'
 import AdminLayout from './components/Admin/AdminLayout'
 import AdminHome from './pages/AdminHome'
+import UserManagement from './components/Admin/UserManagement'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminLayout />} >
           <Route index element={<AdminHome />} />
+          <Route path="users" element={<UserManagement />} />
         </Route>
       </Routes>
     </BrowserRouter>
