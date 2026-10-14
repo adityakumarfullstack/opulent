@@ -75,7 +75,7 @@ const UserManagement = () => {
                     <button type="submit" className="btn-black">Add User</button>
                 </form>
             </div>
-            <div className="user-list overflow-x-auto shadow border border-gray-100 rounded-lg">
+            <div className="user-list overflow-x-auto shadow border border-gray-100 rounded-md">
                 <table className="min-w-full text-gray-500 text-center">
                     <thead className="bg-gray-50 text-gray-700 uppercase border-b border-gray-200 text-sm font-semibold">
                         <tr>

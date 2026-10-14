@@ -65,6 +65,21 @@ h6 {
     @apply w-full border border-gray-200 rounded py-2 px-3 focus:outline-none focus:border-gray-400;
 }
 
+.form-file {
+    @apply w-full border border-gray-200 rounded py-2 px-3 focus:outline-none focus:border-gray-400;
+}
+
+.form-input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.form-input[type=number]::-webkit-inner-spin-button,
+.form-input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .btn-black {
     @apply bg-black text-white py-2.5 px-6 rounded font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out;
 }
@@ -75,14 +90,17 @@ h6 {
 
 .order-list::-webkit-scrollbar,
 .recent-orders::-webkit-scrollbar,
-.user-list::-webkit-scrollbar {
+.user-list::-webkit-scrollbar,
+.product-list::-webkit-scrollbar {
     height: 6px;
     background-color: #f5f5f5;
 }
 
 .order-list::-webkit-scrollbar-thumb,
 .recent-orders::-webkit-scrollbar-thumb,
-.user-list::-webkit-scrollbar-thumb {
+.user-list::-webkit-scrollbar-thumb,
+.product-list::-webkit-scrollbar-thumb {
+    width: 6px;
     height: 8px;
     background-color: #ea2e0e;
     border-radius: 10px;
