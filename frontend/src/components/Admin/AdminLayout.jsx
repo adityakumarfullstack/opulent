@@ -20,11 +20,11 @@ const AdminLayout = () => {
             {isSidebarOpen && (
                 <div className="overlay fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10 md:hidden" onClick={handleSidebarToggle}></div>)}
 
-            <div className={`sidebar-parent bg-gray-900 text-white w-64 absolute top-0 left-0 md:relative transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:static md:translate-x-0 transition-transform ease-in-out duration-300 z-20`}>
+            <div className={`sidebar-parent bg-gray-900 text-white w-64 absolute top-0 left-0 md:relative transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:static md:translate-x-0 transition-transform ease-in-out duration-300 z-20 shrink-0`}>
                 <AdminSidebar />
             </div>
 
-            <main className="flex-1 p-6">
+            <main className="flex-1 p-6 min-w-0">
                 <Outlet />
             </main>
 

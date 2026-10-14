@@ -22,12 +22,12 @@ const ProductManagement = () => {
             <h2 className="text-2xl font-bold mb-4 text-center md:text-left">Product Management</h2>
             <div className="product-list overflow-x-auto shadow-md rounded-md">
                 <table className="min-w-full border-collapse text-gray-500 text-center">
-                    <thead className="bg-gray-100 text-gray-700">
+                    <thead className="bg-gray-100 text-gray-700 uppercase text-sm border-b border-gray-200">
                         <tr>
-                            <th className="py-2 px-4">Name</th>
-                            <th className="py-2 px-4">Price</th>
-                            <th className="py-2 px-4">SKU</th>
-                            <th className="py-2 px-4">Actions</th>
+                            <th className="px-6 py-3">Name</th>
+                            <th className="px-6 py-3">Price</th>
+                            <th className="px-6 py-3">SKU</th>
+                            <th className="px-6 py-3">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

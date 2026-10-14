@@ -77,7 +77,7 @@ const UserManagement = () => {
             </div>
             <div className="user-list overflow-x-auto shadow border border-gray-100 rounded-md">
                 <table className="min-w-full text-gray-500 text-center">
-                    <thead className="bg-gray-50 text-gray-700 uppercase border-b border-gray-200 text-sm font-semibold">
+                    <thead className="bg-gray-100 text-gray-700 uppercase border-b border-gray-200 text-sm font-semibold">
                         <tr>
                             <th scope="col" className="px-6 py-3">Name</th>
                             <th scope="col" className="px-6 py-3">Email</th>
@@ -88,15 +88,15 @@ const UserManagement = () => {
                     <tbody>
                         {users.map((user) => (
                             <tr key={user._id} className="border-b border-gray-200 hover:bg-gray-50 transition duration-300 ease-in-out">
-                                <td className="px-6 py-4 whitespace-nowrap">{user.name}</td>
-                                <td className="px-6 py-4 whitespace-nowrap">{user.email}</td>
-                                <td className="px-6 py-4 whitespace-nowrap">
+                                <td className="px-4 py-2 whitespace-nowrap">{user.name}</td>
+                                <td className="px-4 py-2 whitespace-nowrap">{user.email}</td>
+                                <td className="px-4 py-2 whitespace-nowrap">
                                     <select value={user.role} onChange={(e) => handleRoleChange(user._id, e.target.value)} className="py-1 px-2 border border-gray-300 rounded">
                                         <option value="customer">Customer</option>
                                         <option value="admin">Admin</option>
                                     </select>
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
+                                <td className="px-4 py-2 whitespace-nowrap">
                                     <button className="btn-theme text-sm" onClick={() => handleDeleteUser(user._id)}>Delete</button>
                                 </td>
                             </tr>
