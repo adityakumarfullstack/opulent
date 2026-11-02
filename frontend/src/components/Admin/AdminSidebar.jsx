@@ -26,7 +26,7 @@ const AdminSidebar = () => {
                     <span><FaClipboardList /></span>
                     <span>Orders</span>
                 </NavLink>
-                <NavLink to="/admin/shop" className={({ isActive }) => `flex items-center gap-2 py-2 px-4 rounded cursor-pointer ${isActive ? 'bg-gray-700 text-white' : ''} text-gray-300 hover:bg-gray-700 hover:text-white duration-300 ease-in-out transition`}>
+                <NavLink to="/" className={({ isActive }) => `flex items-center gap-2 py-2 px-4 rounded cursor-pointer ${isActive ? 'bg-gray-700 text-white' : ''} text-gray-300 hover:bg-gray-700 hover:text-white duration-300 ease-in-out transition`}>
                     <span><FaStore /></span>
                     <span>Shop</span>
                 </NavLink>
