@@ -1,0 +1,39 @@
+import mongoose from "mongoose";
+
+    const productSchema = new mongoose.Schema({
+        name:{type: String, required: true,trim:true},
+        description:{type: String, required: true},
+        price: { type: Number, required: true },
+        discountPrice: { type: Number, },
+        countInStock: { type: Number, required: true, min: 0, default: 0 },
+        sku:{type: String, required: true, unique: true},
+        category:{type: String, required: true},
+        brand: { type: String, required: true },
+        sizes: { type: [string], required: true },
+        colors: { type: [string], required: true },
+        collections: { type: string, required: true },
+        material: { type: string, required: true },
+        gender: { type: string,  enum: ['Men', 'Women', 'Unisex'],},
+        images:[
+            {
+                url: { type: String, required: true },
+                altText: { type: String, },
+            }
+        ],
+        isFeatured: { type: Boolean, default: false },
+        isPublished: { type: Boolean, default: false },
+        rating: { type: Number, default: 0 },
+        numReviews: { type: Number, default: 0 },
+        tags: [String],
+        user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+        metaTitle: { type: String },
+        metaDescription: { type: String },
+        metaKeywords: { type: String },
+        dimentions: { length: Number, width: Number, height: Number },
+        weight: { type: Number },
+    },
+    { timestamps: true },
+);
+
+const Product = mongoose.model('Product', productSchema);
+export default Product
