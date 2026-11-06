@@ -9,11 +9,11 @@ import mongoose from "mongoose";
         sku:{type: String, required: true, unique: true},
         category:{type: String, required: true},
         brand: { type: String, required: true },
-        sizes: { type: [string], required: true },
-        colors: { type: [string], required: true },
-        collections: { type: string, required: true },
-        material: { type: string, required: true },
-        gender: { type: string,  enum: ['Men', 'Women', 'Unisex'],},
+        sizes: { type: [String], required: true },
+        colors: { type: [String], required: true },
+        collections: { type: String, required: true },
+        material: { type: String, required: true },
+        gender: { type: String,  enum: ['Men', 'Women', 'Unisex'],},
         images:[
             {
                 url: { type: String, required: true },
