@@ -177,6 +177,13 @@ router.post('/merge', async (req, res) => {
                 await guestCart.save();
                res.status(200).json(guestCart);
             }
+        } else {
+            if (userCart) {
+                // Guest cart has been merged into the user cart, return the user cart
+                return res.status(200).json(userCart);
+            } else {
+                return res.status(404).json({ message: 'Guest cart not found' });
+            }
         }
     
     } catch (error) {
